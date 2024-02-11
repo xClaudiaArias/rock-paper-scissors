@@ -25,8 +25,8 @@ let announceWin = document.getElementById("winner-container")
 let rounds = 5
 
 const playRound = (playerSelection) => {
-
-    if ((computerScore + userScore) <= rounds) {
+    console.log(rounds)
+    if (rounds > 0) {
         rounds -= 1
         if (computerSelection === 'rock' && playerSelection === 'rock') {
             console.log(`${computerSelection} is the same as ${playerSelection }: Its a tie!`)
@@ -71,7 +71,6 @@ const playRound = (playerSelection) => {
             console.log("tie")
             return "tie"
         } 
-
     } else {
         if (userScore > computerScore) {
             announceWin.innerHTML = " User wins"
@@ -84,6 +83,8 @@ const playRound = (playerSelection) => {
     }
 
 } 
+
+playRound(playerSelection)
 
 
 
