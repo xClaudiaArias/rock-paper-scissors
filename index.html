@@ -6,7 +6,34 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Rock Paper scissors from console</h1>
+
+    <section>
+        <h1>Rock Paper Scissors</h1>
+        <p>Score</p>
+        <div id="scores">
+            <p>User score: <span id="user-score">0</span></p>
+            <p>Computer score: <span id="computer-score">0</span></p>
+        </div>
+        <div id="winner-container"></div>
+    </section>
+
+    <!-- <button onClick="playGame()">START</button> -->
+
+    <div id="container">
+        <div id="choices-container">
+            <div id="rock">
+                <button onClick="playRound(this.value)" value="rock" class="uc" id="rock-btn">rock</button>
+            </div>
+            <div id="paper">
+                <button onClick="playRound(this.value)" value="paper" class="uc" id="paper-btn">paper</button>
+            </div>
+            <div id="scissors">
+                <button onClick="playRound(this.value)" value="scissors"  class="uc" id="scissors-btn">scissors</button>
+            </div>
+        </div>
+    </div>
+
+
 
     <script src="./scripts.js"></script>
 </body>
