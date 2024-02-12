@@ -1,4 +1,18 @@
+const welcomeMsg = document.getElementById("welcome");
+const game = document.getElementById("game");
+const startGameBtn = document.getElementById("start-game-btn");
+const playAgain = document.getElementById("play-again");
+const playAgainBtn = document.getElementById("play-again-btn");
+const winWin = document.getElementById("win-win")
 
+startGameBtn.addEventListener("click", () => {
+    game.style.display = "block"
+    welcomeMsg.style.display = "none"
+})
+
+playAgainBtn.addEventListener("click", () => {
+    location.reload()
+})
 
 let user_choice = ""
 
@@ -8,7 +22,6 @@ const getComputerChoice = () => {
     let comp_choice = choices[Math.floor(Math.random() * choices.length)]
     return comp_choice
 }
-
 
 let playerSelection = document.querySelectorAll('.uc').forEach(btn => {
     btn.addEventListener('click', (e) => {
@@ -72,12 +85,19 @@ const playRound = (playerSelection) => {
             return "tie"
         } 
     } else {
+        game.style.display = "none"
         if (userScore > computerScore) {
-            announceWin.innerHTML = " User wins"
+            winWin.innerHTML = "User wins with a score of: " + userScore
+            announceWin.innerHTML = "User wins with a score of: " + userScore
+            playAgain.style.display = "block"
         } else if (computerScore > userScore) {
-            announceWin.innerHTML = "Computer wins"
+            announceWin.innerHTML = "Computer wins with a score of: " + computerScore
+            winWin.innerHTML = "Computer wins with a score of: " + computerScore
+            playAgain.style.display = "block"
         } else {
-            announceWin.innerHTML = "Its a tie :)"
+            announceWin.innerHTML = "Its a tie!"
+            winWin.innerHTML = "Its a tie!" 
+            playAgain.style.display = "block"
         }
         console.log("game over")
     }

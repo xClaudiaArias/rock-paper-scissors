@@ -3,36 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>rock-paper-scissors</title>
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
 
-    <section>
-        <h1>Rock Paper Scissors</h1>
-        <p>Score</p>
-        <div id="scores">
-            <p>User score: <span id="user-score">0</span></p>
-            <p>Computer score: <span id="computer-score">0</span></p>
+
+    <nav>
+        <p><span>ClaudiaArias</span> <a href="/">ROCK PAPER SCISSORS</a></p>
+
+        <ul>
+            <ul>
+                <li><a href="./pages/instructions.html">Instructions</a></li>
+                <li><a href="/pages/about.html">About</a></li>
+                <li><a href="/pages/contact.html">Contact</a></li>
+                <li><a href="/">More Games</a></li>
+            </ul>
+        </ul>
+    </nav>
+
+
+
+    <main>
+
+        <!-- welcome message -->
+        <div id="welcome">
+            <h1>ROCK PAPER SCISSORS</h1>
+            <div id="welcome-btns">
+                <a href="./pages/instructions.html">Instructions</a>
+                <button id="start-game-btn">START</button>
+            </div>
         </div>
-        <div id="winner-container"></div>
-    </section>
 
-    <!-- <button onClick="playGame()">START</button> -->
-
-    <div id="container">
-        <div id="choices-container">
-            <div id="rock">
-                <button onClick="playRound(this.value)" value="rock" class="uc" id="rock-btn">rock</button>
-            </div>
-            <div id="paper">
-                <button onClick="playRound(this.value)" value="paper" class="uc" id="paper-btn">paper</button>
-            </div>
-            <div id="scissors">
-                <button onClick="playRound(this.value)" value="scissors"  class="uc" id="scissors-btn">scissors</button>
+        <div id="play-again">
+            <h1>ROCK PAPER SCISSORS</h1>
+            <p id="win-win"></p>
+            <div id="play-again-btns">
+                <button id="play-again-btn">Play Again?</button>
             </div>
         </div>
-    </div>
 
+
+
+        <div id="game">
+            <section>
+                <h1><span>mini game series | #1</span> Rock Paper Scissors</h1>
+                <p>5 rounds</p>
+                <p>Score</p>
+                <div id="scores">
+                    <p>User score: <span id="user-score">0</span></p>
+                    <p>Computer score: <span id="computer-score">0</span></p>
+                </div>
+                <div id="winner-container"></div>
+            </section>
+        
+            <div id="container">
+                <div id="choices-container">
+                    <div id="rock">
+                        <button onClick="playRound(this.value)" value="rock" class="uc" id="rock-btn">rock</button>
+                    </div>
+                    <div id="paper">
+                        <button onClick="playRound(this.value)" value="paper" class="uc" id="paper-btn">paper</button>
+                    </div>
+                    <div id="scissors">
+                        <button onClick="playRound(this.value)" value="scissors"  class="uc" id="scissors-btn">scissors</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </main>
 
 
     <script src="./scripts.js"></script>

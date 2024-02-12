@@ -1,0 +1,11 @@
+h1 {
+    color: red;
+}
+
+#play-again {
+    display: none;
+}
+
+#game {
+    display: none;
+}
