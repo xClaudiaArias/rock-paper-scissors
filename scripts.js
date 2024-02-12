@@ -29,6 +29,8 @@ let playerSelection = document.querySelectorAll('.uc').forEach(btn => {
     })
 })
 
+
+
 let computerSelection = getComputerChoice()
 let updateUserScore = document.getElementById("user-score");
 let updateCompScore = document.getElementById("computer-score");
